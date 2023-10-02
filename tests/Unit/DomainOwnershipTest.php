@@ -11,7 +11,7 @@ use function PHPUnit\Framework\assertTrue;
 test('it can verify if a domain has required TXT verification records', function () {
 
     $expected = [
-        ['txt' => 'expected-value', 'hostname' => 'hazaveh.net']
+        ['txt' => 'expected-value', 'host' => 'hazaveh.net']
     ];
 
     $domainOwnership = new VerifyDomain(new MockLookupHandler($expected));
