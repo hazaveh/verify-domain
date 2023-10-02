@@ -3,7 +3,9 @@
 </p>  
 
 # VERIFY DOMAIN
-PHP Verify Domain lets you verify the ownership of a domain by validating uploaded file contents and TXT DNS records. You might have seen similar behaviour when verifying your domain on sites like "Google Search Console" and ...
+PHP Verify Domain lets you verify the ownership of a domain by validating uploaded file contents and TXT DNS records. You might have seen similar behaviour when verifying your domain in services like "Google Search Console" and ...
+
+You can learn more about Verify Domain package in this [blog post](https://hazaveh.net/2023/10/verify-domain-ownership-in-php/).
 
 This library is compatible with php > 5 and has almost zero runtime dependency.
 
