@@ -21,7 +21,7 @@ class VerifyDomain
      * @param string $value
      * @return bool
      */
-    public function verifyByDNS(string $domain, string $value)
+    public function verifyByDNS($domain, $value)
     {
         try {
             $records = $this->handler->dns_get_record($domain, DNS_TXT);
@@ -31,7 +31,7 @@ class VerifyDomain
 
         $filteredRecords = [];
         foreach ($records as $record) {
-            if ($record['txt'] === $value && $record['hostname'] === $domain) {
+            if ($record['txt'] === $value && $record['host']) {
                 $filteredRecords[] = $record;
             }
         }
