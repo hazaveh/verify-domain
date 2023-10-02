@@ -1,0 +1,34 @@
+{
+    "name": "hazaveh/verify-domain",
+    "description": "Verify Domain Ownership with PHP",
+    "type": "library",
+    "require": {
+        "php": ">=5"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.30",
+        "pestphp/pest": "^2.19"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hazaveh\\VerifyDomain\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mahdi Hazaveh",
+            "email": "me@hazaveh.net"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
