@@ -34,7 +34,7 @@ $byFile = $verify->verifyByFile("hazaveh.net", 'verification.txt', "php-is-aweso
 /**
 * Verifies '<meta name="verification" content="verification-code-123">' exists on hazaveh.net
  */
-$byFile = $verify->verifyByMeta("hazaveh.net", 'verification', "verification-code-123");
+$byMeta = $verify->verifyByMeta("hazaveh.net", 'verification', "verification-code-123");
 
 ```
 
