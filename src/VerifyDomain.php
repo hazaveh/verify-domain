@@ -55,4 +55,22 @@ class VerifyDomain
             return  trim($this->handler->file_get_contents($httpUrl, false, null, 0, 500)) === $value;
         }
     }
+
+    /**
+     * @param $domain
+     * @param $name
+     * @param $value
+     * @return bool
+     */
+    public function verifyByMeta($domain, $name, $value)
+    {
+        $tags = $this->handler->get_meta_tags("https://{$domain}");
+        if (! $tags) {
+            $tags = $this->handler->get_meta_tags("http://{$domain}");
+        }
+        if (isset($tags[$name]) && $tags[$name] === $value) {
+            return true;
+        }
+        return false;
+    }
 }
