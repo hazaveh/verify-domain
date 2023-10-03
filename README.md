@@ -3,7 +3,7 @@
 </p>  
 
 # VERIFY DOMAIN
-PHP Verify Domain lets you verify the ownership of a domain by validating uploaded file contents and TXT DNS records. You might have seen similar behaviour when verifying your domain in services like "Google Search Console" and ...
+PHP Verify Domain lets you verify the ownership of a domain by validating uploaded **File Content**, **Meta Tags** and **TXT DNS records**. You might have seen similar behaviour when verifying your domain in services like "Google Search Console" and ...
 
 You can learn more about Verify Domain package in this [blog post](https://hazaveh.net/2023/10/verify-domain-ownership-in-php/).
 
@@ -30,6 +30,11 @@ $byDNS = $verify->verifyByDNS('hazaveh.net', 'php-is-awesome');
 * Verifies "https://hazaveh.net/verification.txt" with the content of "php-is-awesome" exists.
  */
 $byFile = $verify->verifyByFile("hazaveh.net", 'verification.txt', "php-is-awesome");
+
+/**
+* Verifies '<meta name="verification" content="verification-code-123">' exists on hazaveh.net
+ */
+$byFile = $verify->verifyByMeta("hazaveh.net", 'verification', "verification-code-123");
 
 ```
 
