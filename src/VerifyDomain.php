@@ -47,7 +47,6 @@ class VerifyDomain
     public function verifyByFile($domain, $file, $value)
     {
         $url = "http://$domain/$file";
-
-        return trim($this->handler->file_get_contents($url)) == $value;
+        return trim($this->handler->file_get_contents($url, false, null, 0, 500)) == $value;
     }
 }
