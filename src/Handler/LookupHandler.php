@@ -18,6 +18,6 @@ class LookupHandler implements HandlerInterface
 
     public function get_meta_tags(...$arguments)
     {
-        return get_meta_tags($arguments);
+        return get_meta_tags(...$arguments);
     }
 }
